@@ -79,5 +79,5 @@ jobs:
             # Выполняет pull образа с DockerHub
             sudo docker pull 26remph/infra_action
             #остановка всех контейнеров
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 26remph/infra_acton
+            sudo docker stop $(sudo docker ps -a -q) || true
+            sudo docker run --rm -d -p 5000:5000 26remph/infra_action
